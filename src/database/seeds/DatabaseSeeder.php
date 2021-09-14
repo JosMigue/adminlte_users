@@ -28,8 +28,8 @@ class DatabaseSeeder extends Seeder
         self::llenarTabla('users',[
             [
                 'name' =>  'root',
-                'email'=> 'root@root.com',
-                'password' => bcrypt('secret'),
+                'email'=> env('EMAIL_SEED_PACKAGE','root@root.com'),
+                'password' => bcrypt(env('PASS_SEED_PACKAGE','secretpassword')),
                 'rol_id' =>  '1'
             ]
         ]);
