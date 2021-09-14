@@ -1,5 +1,5 @@
 {
-  "name": "JosMigue/adminlte_users",
+  "name": "josmigue/adminlte_users",
   "description": "Templeta AdminLTE para laravel",
   "license": "MIT",
   "authors": [
@@ -19,12 +19,12 @@
   },
   "autoload": {
     "psr-4": {
-      "JosMigue\\AdminlteUsers\\": "src"
+      "josmigue\\AdminlteUsers\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "JosMigue\\AdminlteUsers\\Tests\\": "tests"
+      "josmigue\\AdminlteUsers\\Tests\\": "tests"
     }
   }
 }
