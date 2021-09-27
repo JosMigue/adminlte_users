@@ -1,10 +1,10 @@
 <?php
-namespace Ozparr\AdminlteUsers\DataBase\Seeds;
+namespace josmigue\AdminlteUsers\DataBase\Seeds;
 
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Ozparr\Login\Models\Rol;
+use josmigue\Login\Models\Rol;
 
 class DatabaseSeeder extends Seeder
 {

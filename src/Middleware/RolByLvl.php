@@ -1,6 +1,6 @@
 <?php
 
-namespace Ozparr\AdminlteUsers\Middleware;
+namespace josmigue\AdminlteUsers\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

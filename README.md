@@ -15,7 +15,7 @@ Agrega los nuevos provider en el array de ```providers``` que se encuentra en el
 ```
 'providers' => ['
     // ...
-    Ozparr\AdminlteUsers\AdminLoginServiceProvider::class,
+    josmigue\AdminlteUsers\AdminLoginServiceProvider::class,
     Laracasts\Flash\FlashServiceProvider::class,
     // ...
   ],
@@ -33,8 +33,8 @@ Ahora en el archivo ```app\http\Kernel.php``` agrega en el array ```routeMiddlew
 ```
  protected $routeMiddleware = [
      ...
-     'rolByLvl' => \Ozparr\AdminlteUsers\Middleware\RolByLvl::class,
-     'rolByName' => \Ozparr\AdminlteUsers\Middleware\RolByName::class
+     'rolByLvl' => \josmigue\AdminlteUsers\Middleware\RolByLvl::class,
+     'rolByName' => \josmigue\AdminlteUsers\Middleware\RolByName::class
      ...
  ]
 
@@ -44,7 +44,7 @@ A continuación agrega en el modelo ```User``` los siguientes métodos:
 
 ```
 public function rol(){
-    return $this->belongsTo('Ozparr\AdminlteUsers\Models\Rol');
+    return $this->belongsTo('josmigue\AdminlteUsers\Models\Rol');
 }
 
 public function getImgAttribute($value)
@@ -76,10 +76,16 @@ protected $fillable = [
 
 Ejecutar en consola ```php artisan migrate``` para crear las migraciones
 
+En tu archivo de variables de entorno agrega las siguientes variables en caso de querer configurar un usuario con correo y contraseña personalizado, (Estas variables no son obligatorias) caso contrario el valor por defecto será ```root@root.com``` como usuario y ```secretpassword``` como contraseña 
+
+
+    EMAIL_SEED_PACKAGE=
+    PASS_SEED_PACKAGE=
+
 A continuacion ejecutamos los seeds para crear un usuario root 
 
 ```
-php artisan db:seed --class="\Ozparr\AdminlteUsers\DataBase\Seeds\DatabaseSeeder"
+php artisan db:seed --class="\josmigue\AdminlteUsers\DataBase\Seeds\DatabaseSeeder"
 ```
 
 Crea un link simbólico de ```stograge\public``` a la carpeta ```\public```, para poder guardar las imágenes de los usuarios:
@@ -97,3 +103,4 @@ Sustituir la sigiente linea de codigo del Middeleware que se encuentra en ```app
 por esta
 
     return redirect(config('loginoz.loginRedirec'));
+

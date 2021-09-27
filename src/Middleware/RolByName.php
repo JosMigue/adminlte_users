@@ -1,6 +1,6 @@
 <?php
 
-namespace Ozparr\AdminlteUsers\Middleware;
+namespace josmigue\AdminlteUsers\Middleware;
 
 use App\Rol;
 use Closure;
@@ -19,7 +19,7 @@ class RolByName
     public function handle($request, Closure $next, $rol)
     {
         try{
-            $rol = \Ozparr\AdminlteUsers\Models\Rol::where('nombre','=',$rol)->firstOrFail();
+            $rol = \josmigue\AdminlteUsers\Models\Rol::where('nombre','=',$rol)->firstOrFail();
         }
         catch (\Exception $e){
             abort(500);

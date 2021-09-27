@@ -1,6 +1,6 @@
 <?php
 
-namespace Ozparr\AdminlteUsers\Controllers\Auth;
+namespace josmigue\AdminlteUsers\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;

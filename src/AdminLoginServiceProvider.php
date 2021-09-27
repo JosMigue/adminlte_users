@@ -1,6 +1,6 @@
 <?php
 
-namespace Ozparr\AdminlteUsers;
+namespace josmigue\AdminlteUsers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -34,10 +34,10 @@ class AdminLoginServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('Ozparr\AdminlteUsers\Controllers\Auth\LoginController');
-        $this->app->make('Ozparr\AdminlteUsers\Controllers\Auth\RegisterController');
+        $this->app->make('josmigue\AdminlteUsers\Controllers\Auth\LoginController');
+        $this->app->make('josmigue\AdminlteUsers\Controllers\Auth\RegisterController');
 
-        $this->app->make('Ozparr\AdminlteUsers\Controllers\UsersController');
-        $this->app->make('Ozparr\AdminlteUsers\Controllers\RolesController');
+        $this->app->make('josmigue\AdminlteUsers\Controllers\UsersController');
+        $this->app->make('josmigue\AdminlteUsers\Controllers\RolesController');
     }
 }

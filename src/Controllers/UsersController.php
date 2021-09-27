@@ -1,12 +1,12 @@
 <?php
 
-namespace Ozparr\AdminlteUsers\Controllers;
+namespace josmigue\AdminlteUsers\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use Ozparr\AdminlteUsers\Models\Rol;
+use josmigue\AdminlteUsers\Models\Rol;
 
 class UsersController extends Controller
 {
