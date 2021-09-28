@@ -7,7 +7,7 @@ Instalación
 Para instalar este paquete ejecuta en la raíz del proyecto lo siguiente:
 
 ```
-composer require luisozparr/adminlte_users
+composer require josmigue/adminlte_users
 ```
 
 Agrega los nuevos provider en el array de ```providers``` que se encuentra en el archivo ```config/app.php:```
